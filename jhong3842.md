@@ -23,14 +23,14 @@
 
    web python 코드를 확인해보면 file_read 관련 함수가 존재함  
    
-   @app.route("/get",methods=['GET'])  
-   def static_page():  
-   if 'page' in flask.request.args:  
-	    page = flask.request.args.get('page')  
-	    path = 'static/' + page  
-	    if os.path.exists(path) and not os.path.isdir(path):  
-		return file_read(path)  
-   
+   >@app.route("/get",methods=['GET'])  
+   >def static_page():  
+   >if 'page' in flask.request.args:  
+   >	    page = flask.request.args.get('page')  
+   >	    path = 'static/' + page  
+   >	    if os.path.exists(path) and not os.path.isdir(path):  
+   >		return file_read(path)  
+     
    확인 get 방식으로 들어오는 파일의  "/get" 규칙으로 들어오는 page의 경로를 읽어오는 함수임  
    
    그렇기에 ../ 와같이 이전 디렉토리를 검색하면서 디렉토리의 위치를 파악함  
