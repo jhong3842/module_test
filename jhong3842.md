@@ -15,7 +15,8 @@
   
   bank에 해당하는 flag 값은 admin계정의 email에 존재한다고 하였음  
   
-  
+  msg관련 쿼리가 실행되는 부분에 msg = ', (select email from user_table where user_id like 'admin'), ' 와같이  
+  user_table  테이블에서 user_id가 admin인 이메일을 출력하게 하는 쿼리를 flag 값을 획득할 수 있음
   
 
 	2. Handling a String in C language 
